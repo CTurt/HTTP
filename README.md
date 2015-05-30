@@ -1,0 +1,1 @@
+Simple HTTP server. Only supports HTML files in the same directory.
