@@ -36,6 +36,10 @@ int server_init(struct server *self, int port) {
 	return 1;
 }
 
+void server_deinit(struct server *self) {
+	closesocket(self->listener);
+}
+
 int server_getRequest(struct server *self, char *buffer, size_t size) {
 	self->client = accept(self->listener, (struct sockaddr *)&self->addressInfo, &self->addressInfoSize);
 	return recv(self->client, buffer, size, 0);

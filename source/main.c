@@ -78,6 +78,8 @@ int main(void) {
 		free(response.buffer);
 	}
 	
+	server_deinit(&server);
+	
 	disableWireless();
 	
 	return EXIT_SUCCESS;
