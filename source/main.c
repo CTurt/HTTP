@@ -51,10 +51,9 @@ int main(void) {
 		if(strncmp(buffer, "GET ", strlen("GET ")) == 0) {
 			char *page = buffer + strlen("GET ");
 			char *end = strchr(page, ' ');
-			size_t pageSize = end - page;
 			
 			if(end && strncmp(end + 1, "HTTP", strlen("HTTP")) == 0) {
-				snprintf(path, sizeof(path), "%.*s", pageSize, page);
+				snprintf(path, sizeof(path), "%.*s", end - page, page);
 			}
 			else strcpy(path, "index.html");
 		}
