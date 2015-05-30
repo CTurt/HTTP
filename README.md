@@ -1,1 +1,1 @@
-Simple HTTP server. Only supports HTML files in the same directory.
+Simple HTTP server for Windows, written in C. Only supports HTML files in the same directory.
