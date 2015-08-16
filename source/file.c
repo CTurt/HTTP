@@ -28,7 +28,7 @@ int fileReader_read(struct fileReader *self, char *filename) {
 	}
 	
 	if(error & (ERROR_FOPEN | ERROR_MALLOC)) {
-		printf("%s!\n", errors[error], error);
+		printf("%s!\n", errors[error]);
 		return 0;
 	}
 	
